@@ -4,7 +4,8 @@
             Header
         </div>
         <div class="overflow-hidden d-flex justify-content-center align-items-center">
-            <img src="../../assets/Images/mobiles/10/1.jpg" alt="" class="card-img-top">
+            <img src="../../assets/Images/mobiles/10/1.jpg" alt="" class="card-img-top"
+            OpenProductDetails [productId]="1" >
         </div>
     
         <div class="card-body">
@@ -28,12 +29,12 @@
 </div>
 <div class="list-view" *ngIf="view === 'list'">
     <div class="card">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-md-4 overflow-hidden d-flex justify-content-center align-items-center">
                 <img src="../../assets/Images/mobiles/10/1.jpg" class="img-fluid rounded-start"
                 alt="Product Image">
             </div>
-            <div class="col d-flex flex-column">
+                <div class="col">
                 <div class="card-header text-center">
                     Header
                 </div>
@@ -57,37 +58,36 @@
         </div>
     </div>
 </div>
-
-<!-- Cart Item View-->
 <div class="cart-item-view" *ngIf="view === 'currcartitem'">
     <div class="card">
         <div class="row g-0">
             <div class="col-4 overflow-hidden d-flex justify-content-center align-items-center">
-                <img src="../../assets/Images/mobiles/10/1.jpg" class="img-fluid rounded-start" 
-                alt="Product Image">
-            </div>
-            <div class="col-8">
-                <h5 class="card-title title">Title</h5>
-                <h5 class="card-title text-success"> Final Price
-                    <span class="text-primary">11 products are available.</span>
-                </h5>
-                <h6 class="card-subtitle text-danger text-decoration-line-through"> Original Price
-                    </h6>
-            </div>
-            <div class="card-footer text-muted d-grid gap-2">
-                <button class="btn btn-outline-danger" type="button">Remove From Cart</button>
+                <img src="../../assets/Images/mobiles/10/1.jpg" class="img-fluid rounded-start"
+                alt="Product Image" OpenProductDetails [productId]="1">
+                </div>
+                <div class="col-8">
+                    <div class="card-body">
+                        <h5 class="card-title title">Title</h5>
+                        <h5 class="card-title text-success">Final Price
+                        <span class="text-primary">11 products are available. </span>
+                        </h5>
+                        <h6 class="card-subtitle text-danger text-decoration-line-through">Original Price</h6>
+                    </div>
+                    <div class="card-footer text-muted d-grid gap-2">
+                        <button class="btn btn-outlinr-danger" type="button">Remove From Cart</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 <div class="cart-item-view" *ngIf="view === 'prevcartitem'">
     <div class="card text-center">
-        <div class="overflow-hidden d-flex justify-content-center align-items-center">
-            <img src="../../assets/Images/mobiles/10/1.jpg" alt="" class="card-img-top">
-        </div>
-        <div class="card-body">
-            <h5 class="card-title title">Title</h5>
-        </div>
+
+    <div class="overflow-hidden d-flex justify-content-center align-items-center">
+        <img src="../../assets/Images/mobiles/10/1.jpg" alt="" class="card-img-top">
     </div>
-</div>
+    <div class="card-body">
+        <h5 class="card-title title"> Title</h5>
+    </div> 
+    </div>
+</div>   
