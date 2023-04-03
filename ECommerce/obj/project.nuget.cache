@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "yvfUQYGZF3O619p3oNmLdaty7e9A79TEyh93C4/DqkPS7TYcVJRuy0YJ+T/SLAKJg+kQp5eNnllxnM7yTCelfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\eygdnet20\\source\\repos\\ECommerce\\ECommerce\\ECommerce.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eygdnet20\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\eygdnet20\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\eygdnet20\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\eygdnet20\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\eygdnet20\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\eygdnet20\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
