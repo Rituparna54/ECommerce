@@ -1,7 +1,8 @@
 import { Component , ElementRef, OnInit, Type, ViewChild, ViewContainerRef} from '@angular/core';
 import { LoginComponent } from '../login/login.component';
-import { NavigationItem } from '../models/models';
+import { Category, NavigationItem } from '../models/models';
 import { RegisterComponent } from '../register/register.component';
+import { NavigationService } from '../services/navigation.service';
 
 @Component({
   selector: 'app-header',
@@ -13,18 +14,28 @@ export class HeaderComponent implements OnInit {
   @ViewChild('container' , {read: ViewContainerRef , static: true})
   container!: ViewContainerRef;
   
-  navigationList: NavigationItem[]=[
-    {
-      category: "electronics",
-      subcategories:["mobiles","laptops"]
-    },
-    {
-      category: "furniture",
-      subcategories:["chairs","tables"]
-    },
-  ];
-  constructor(){}
-  ngOnInit(): void {}
+  navigationList: NavigationItem[]=[];
+  constructor(private navigationService: NavigationService){}
+  ngOnInit(): void {
+    // Get Category List
+    this.navigationService.getCategoryList().subscribe((list: Category[]) => {
+      for (let item of list) {
+        let present = false;
+        for (let navItem of this.navigationList) {
+          if (navItem.category === item.category) {
+            navItem.subcategories.push(item.subCategory);
+            present = true;
+          }
+        }
+        if (!present) {
+          this.navigationList.push({
+            category: item.category,
+            subcategories: [item.subCategory],
+          });
+        }
+      }
+    });
+  }
 
   openModal(name:string){
     this.container.clear();

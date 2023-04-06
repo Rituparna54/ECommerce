@@ -18,7 +18,7 @@ align-items-center">
                     <li *ngFor="let subcategory of item.subcategories" [style.cursor]
                     ="'pointer'">
                     <a class="dropdown-item" OpenProducts
-             [category]="{id: 0, 'category': item.category, 'subcategory': subcategory}">
+             [category]="{id: 0, 'category': item.category, 'subCategory': subcategory}">
                                 {{subcategory | titlecase}}
                             </a>
                 </li>
