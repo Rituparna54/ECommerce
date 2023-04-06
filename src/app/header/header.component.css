@@ -1,10 +1,9 @@
 :host {
-    display: black;
-    height: 4rem ;
+    display: block;
+    height: 4rem;
     width: 100%;
     position: fixed;
-    top: 0% ;
-    left:0%;
-    left:0%;
+    top: 0%;
+    left: 0%;
     z-index: 20;
 }

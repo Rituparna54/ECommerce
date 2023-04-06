@@ -14,13 +14,13 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { OpenProductsDirective } from './open-products.directive';
-import { OpenProductDetailsDirective } from './open-product-details.directive';
-import { LoginComponent } from './login/login.component';
+import { OpenProductsDirective } from './directives/open-products.directive';
+import { OpenProductDetailsDirective } from './directives/open-product-details.directive';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -37,18 +37,25 @@ import { RouterModule } from '@angular/router';
     PageNotFoundComponent,
     OpenProductsDirective,
     OpenProductDetailsDirective,
-    LoginComponent,
     RegisterComponent,
-   
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => {
+          return localStorage.getItem('user');
+        },
+        allowedDomains: ['localhost:7149'],
+      },
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
